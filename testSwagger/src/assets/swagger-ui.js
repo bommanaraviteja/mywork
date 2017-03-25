@@ -23894,8 +23894,10 @@ SwaggerUi.Views.OperationView = Backbone.View.extend({
       $.bbq.pushState('#/', 2);
       event.preventDefault();
       Docs.collapseOperation(elem);
+      elem[0].style = "display: none !important";
     } else {
       Docs.expandOperation(elem);
+      elem[0].style = "display: block !important";
     }
   },
 
